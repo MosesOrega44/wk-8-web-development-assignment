@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Portfolio — Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">My<span class="accent">Site</span></a>
+      <button id="nav-toggle" class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Open navigation">☰</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <h1>Hi — I'm Moses, a web developer</h1>
+        <p>Building responsive, accessible websites that people enjoy using.</p>
+        <p><a class="btn" href="services.html">View services</a> <a class="btn ghost" href="contact.html">Get in touch</a></p>
+      </div>
+    </section>
+
+    <section class="features container">
+      <article class="card">
+        <h3>Responsive Design</h3>
+        <p>Layouts that work on any screen size.</p>
+      </article>
+      <article class="card">
+        <h3>Interactive UI</h3>
+        <p>Small, thoughtful micro-interactions using JS and CSS.</p>
+      </article>
+      <article class="card">
+        <h3>Clean Code</h3>
+        <p>Semantic HTML, modular CSS, and accessible patterns.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span>Moses Orega.</p>
+    </div>
+  </footer>
+</body>
+</html>

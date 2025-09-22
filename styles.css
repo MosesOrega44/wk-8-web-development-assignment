@@ -1,0 +1,177 @@
+:root {
+    --primary: #ff6b6b;   /* coral red */
+    --secondary: #1dd1a1; /* teal */
+    --bg: #fdfdfd;
+    --text: #222;
+    --muted: #666;
+    --radius: 14px;
+    --shadow: 0 6px 18px rgba(0,0,0,0.08);
+  }
+  
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Poppins", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem;
+  }
+  
+  /* Header */
+  .site-header {
+    background: #fff;
+    border-bottom: 2px solid var(--secondary);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--primary);
+  }
+  .logo .accent { color: var(--secondary); }
+  .nav-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+  }
+  .site-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0; padding: 0;
+  }
+  .site-nav a {
+    padding: .5rem .75rem;
+    text-decoration: none;
+    color: var(--muted);
+    border-radius: var(--radius);
+    transition: all .3s;
+  }
+  .site-nav a.active, .site-nav a:hover {
+    background: var(--primary);
+    color: #fff;
+  }
+  
+  /* Hero */
+  .hero {
+    background: url('https://source.unsplash.com/1600x600/?technology,web') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 5rem 1rem;
+  }
+  .hero h1 { font-size: 2.5rem; margin-bottom: .5rem; }
+  .hero p { font-size: 1.2rem; margin-bottom: 1rem; }
+  .btn {
+    display: inline-block;
+    padding: .7rem 1.2rem;
+    background: var(--primary);
+    color: #fff;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: background .3s;
+  }
+  .btn:hover { background: #ff5252; }
+  .btn.ghost {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+  }
+  
+  /* Features / Services */
+  .features, .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  .card, .service {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 1rem;
+    box-shadow: var(--shadow);
+    transition: transform .3s;
+  }
+  .card:hover, .service:hover { transform: translateY(-5px); }
+  .service img {
+    width: 100%;
+    border-radius: var(--radius);
+    margin-bottom: .5rem;
+  }
+  
+  /* About page */
+  .timeline ul { list-style: none; padding: 0; }
+  .timeline li {
+    margin: .75rem 0;
+    padding: .5rem 1rem;
+    background: var(--secondary);
+    color: #fff;
+    border-radius: var(--radius);
+  }
+  
+  /* Contact page */
+  .contact-page {
+    background: url('https://source.unsplash.com/1600x600/?office,workspace') center/cover no-repeat;
+    padding: 2rem;
+  }
+  .contact-form {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    max-width: 600px;
+    margin: auto;
+    display: grid;
+    gap: 1rem;
+  }
+  .contact-form input, .contact-form textarea {
+    padding: .7rem;
+    border: 1px solid #ddd;
+    border-radius: var(--radius);
+  }
+  .contact-form button {
+    background: var(--secondary);
+    color: #fff;
+    border: none;
+    padding: .7rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+  }
+  .contact-form button:hover { background: #10ac84; }
+  
+  /* Footer */
+  .site-footer {
+    text-align: center;
+    padding: 1rem;
+    background: #fff;
+    border-top: 2px solid var(--secondary);
+    margin-top: 2rem;
+  }
+  
+  /* Responsive nav */
+  @media (max-width: 800px) {
+    .nav-toggle { display: block; }
+    .site-nav {
+      position: absolute;
+      top: 64px; left: 0; right: 0;
+      background: #fff;
+      display: none;
+      padding: 1rem;
+    }
+    .site-nav[data-open="true"] { display: block; }
+    .site-nav ul { flex-direction: column; }
+  }
+  
